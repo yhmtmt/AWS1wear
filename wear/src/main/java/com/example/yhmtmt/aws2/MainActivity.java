@@ -96,6 +96,7 @@ public class MainActivity extends WearableActivity implements View.OnClickListen
         @Override
         public void run() {
             if(!watcher.isAlive()){
+                System.out.println("Restarting monitoring thread.");
                 watcher.start();
             }
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,81 +13,104 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/inner_frame_layout_padding">
+        android:padding="@dimen/inner_frame_layout_padding"
+        app:boxedEdges="all"
+        tools:ignore="MissingPrefix">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/port"
-                    android:layout_width="45dp"
-                    android:layout_height="35dp"
-                    android:text="P" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/midship"
-                    android:layout_width="45dp"
-                    android:layout_height="35dp"
-                    android:text="M" />
+                    <Button
+                        android:id="@+id/port"
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:text="P" />
 
-                <Button
-                    android:id="@+id/starboard"
-                    android:layout_width="45dp"
-                    android:layout_height="35dp"
-                    android:text="S" />
+                    <Button
+                        android:id="@+id/midship"
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:text="M" />
 
+                    <Button
+                        android:id="@+id/starboard"
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:text="S" />
+
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/rudder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/info1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="c: xxx h: xxx d: xxx " />
+
+                <TextView
+                    android:id="@+id/info2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="s: xx.x r: xx " />
+                <SeekBar
+                    android:id="@+id/engine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/backward"
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:text="B" />
+
+                    <Button
+                        android:id="@+id/neutral"
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:text="N" />
+
+                    <Button
+                        android:id="@+id/forward"
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:text="F" />
+                </LinearLayout>
             </LinearLayout>
 
-            <SeekBar
-                android:id="@+id/rudder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:id="@+id/info1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="c: xxx h: xxx d: xxx "/>
-            <TextView
-                android:id="@+id/info2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="s: xx.x r: xx "/>
-            <SeekBar
-                android:id="@+id/engine"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/backward"
-                    android:layout_width="45dp"
-                    android:layout_height="35dp"
-                    android:text="B" />
-
-                <Button
-                    android:id="@+id/neutral"
-                    android:layout_width="45dp"
-                    android:layout_height="35dp"
-                    android:text="N" />
-
-                <Button
-                    android:id="@+id/forward"
-                    android:layout_width="45dp"
-                    android:layout_height="35dp"
-                    android:text="F" />
-            </LinearLayout>
-
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
         </LinearLayout>
 
 
